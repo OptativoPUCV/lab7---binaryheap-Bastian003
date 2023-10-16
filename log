@@ -65,3 +65,20 @@ heap.c:38:12: error: variable ‘nuevo’ set but not used [-Werror=unused-but-s
 cc1: all warnings being treated as errors
 Compilation failed
 a77c04c
+Mon 16 Oct 2023 02:48:34 AM UTC: 
+ heap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:39:18: error: expected ‘;’ before ‘nuevo’
+   39 |   nuevo.data=data
+      |                  ^
+      |                  ;
+   40 |   nuevo.priority=p;
+      |   ~~~~~           
+heap.c:38:12: error: variable ‘nuevo’ set but not used [-Werror=unused-but-set-variable]
+   38 |   heapElem nuevo;
+      |            ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2adfee1
