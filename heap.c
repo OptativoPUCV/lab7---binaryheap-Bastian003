@@ -42,13 +42,13 @@ void heap_push(Heap* pq, void* data, int priority){
   pq->heapArray[indice].priority=priority;
   
   while(indice !=0){
-    int indicepapa=(indice-1)/2;
+    heapElem indicepapa=pq->heapArray[(indice-1)/2];
     if(pq->heapArray[indice].priority < pq->heapArray[indicepapa].priority){
 
-      heapElem cont=pq->heapArray[indice];
-      pq->heapArray[indice]=pq->heapArray[indicepapa];
-      pq->heapArray[indicepapa]=cont;
-      indice=indicepapa;
+      heapElem cont=indicepapa;
+      pq->heapArray[(indice-1)/2]=pq->heapArray[indice];
+      pq->heapArray[indice]=cont;
+      indice=(indice-1)/2;
     }else{
       break;
     }
