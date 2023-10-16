@@ -2,3 +2,14 @@ Thu 28 Sep 2023 07:23:18 PM UTC:
  tests:  0|4
 total_score: 0/70
 8e61835
+Mon 16 Oct 2023 02:32:03 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:36:9: error: unused variable ‘reserva’ [-Werror=unused-variable]
+   36 |   Heap* reserva=(Heap*)malloc(sizeof(Heap));
+      |         ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3a8d86f

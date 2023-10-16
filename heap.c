@@ -33,6 +33,6 @@ void heap_pop(Heap* pq){
 }
 
 Heap* createHeap(){
-
-   return NULL;
+  Heap* reserva=(Heap*)malloc(sizeof(Heap));
+  return NULL;
 }
