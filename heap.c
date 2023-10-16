@@ -57,31 +57,29 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-  if(pq->size>0){
-    return;
-  }
+  if(pq->size==0)return;
   pq->heapArray[0]=pq->heapArray[pq->size-1];
   pq->size=pq->size-1;
-  int cont=0,hijo,hijito,papa;
-  while(1){
+
+  int cont=0;
+  int hijo , hijito,papa;
+  while(true){
     hijo=2*cont+1;
     hijito=2*cont+2;
-    if(hijo<pq->size && pq->heapArray[hijo].priority > pq->heapArray[cont].priority){
-      papa=hijo;
-      
-    }else{
-      papa=cont;
-    }
-    if(hijito < pq->size && pq->heapArray[hijito].priority > pq->heapArray[papa].priority){
-      papa=hijito;
-    }
+    if(hijo< pq->size && pq->heapArray[hijo].priority > pq->heapArray[cont].priority)papa=hijo;
+    else papa=cont;
 
-    if(cont==papa){
-      break;
-    }
+    if(hijito< pq->size && pq->heapArray[hijito].priority > pq->heapArray[papa].priority)papa=hijito;
 
-    
+    if(cont==papa)break;
+
+    heapElem nuevo=pq->heapArray[cont];
+    pq->heapArray[cont]=pq->heapArray[papa];
+    pq->heapArray[papa]=nuevo;
+    cont=papa;
   }
+
+}
 
   heapElem nuevo=pq->heapArray[cont];
   pq->heapArray[cont]=pq->heapArray[papa];
