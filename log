@@ -454,3 +454,32 @@ heap.c:90:1: error: expected identifier or ‘(’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 ac421ea
+Mon 16 Oct 2023 03:21:37 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c:84:18: error: ‘pq’ undeclared here (not in a function)
+   84 |   heapElem nuevo=pq->heapArray[cont];
+      |                  ^~
+heap.c:84:32: error: ‘cont’ undeclared here (not in a function)
+   84 |   heapElem nuevo=pq->heapArray[cont];
+      |                                ^~~~
+heap.c:85:5: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   85 |   pq->heapArray[cont]=pq->heapArray[papa];
+      |     ^~
+heap.c:87:5: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   87 |   pq->heapArray[papa]=nuevo;
+      |     ^~
+heap.c:88:3: error: data definition has no type or storage class [-Werror]
+   88 |   cont=papa;
+      |   ^~~~
+heap.c:88:3: error: type defaults to ‘int’ in declaration of ‘cont’ [-Werror=implicit-int]
+heap.c:88:8: error: ‘papa’ undeclared here (not in a function)
+   88 |   cont=papa;
+      |        ^~~~
+heap.c:90:1: error: expected identifier or ‘(’ before ‘}’ token
+   90 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+0be8352
