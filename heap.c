@@ -83,7 +83,12 @@ void heap_pop(Heap* pq){
     
   }
 
+  heapElem nuevo=pq->heapArray[cont];
+  pq->heapArray[cont]=pq->heapArray[papa];
 
+  pq->heapArray[papa]=nuevo;
+  cont=papa;
+  
 }
 
 Heap* createHeap(){
