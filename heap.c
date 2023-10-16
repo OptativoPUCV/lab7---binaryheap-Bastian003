@@ -59,7 +59,7 @@ void heap_pop(Heap* pq){
   if(pq->size==0){
     return;
   }
-  
+    
   pq->heapArray[0]=pq->heapArray[pq->size-1];
   pq->size=pq->size-1;
 
@@ -68,7 +68,7 @@ void heap_pop(Heap* pq){
   while(1){
     hijo=2*cont+1;
     hijito=2*cont+2;
-    if(hijo< pq->size && pq->heapArray[hijo].priority >pq>heapArray[cont].priority)papa=hijo;
+    if(hijo< pq->size && pq->heapArray[hijo].priority > pq->heapArray[cont].priority)papa=hijo;
     else papa=cont;
 
     if(hijito< pq->size && pq->heapArray[hijito].priority > pq->heapArray[papa].priority)papa=hijito;
