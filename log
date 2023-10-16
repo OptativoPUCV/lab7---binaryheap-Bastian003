@@ -285,3 +285,15 @@ Mon 16 Oct 2023 03:02:56 AM UTC:
  tests:  2|2
 total_score: 20/70
 2803028
+Mon 16 Oct 2023 03:06:38 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:44:9: error: ‘indice1’ undeclared (first use in this function); did you mean ‘indice’?
+   44 |   while(indice1=0){
+      |         ^~~~~~~
+      |         indice
+heap.c:44:9: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+5a7bbc2
