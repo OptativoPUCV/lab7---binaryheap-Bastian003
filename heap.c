@@ -72,6 +72,14 @@ void heap_pop(Heap* pq){
     }else{
       papa=cont;
     }
+    if(hijito < pq->size && pq->heapArray[hijito].priority > pq->heapArray[papa].priority{
+      papa=hijito;
+    }
+
+    if(cont==papa){
+      break;
+    }
+
     
   }
 

@@ -387,3 +387,17 @@ heap.c:65:19: error: variable ‘hijito’ set but not used [-Werror=unused-but-
 cc1: all warnings being treated as errors
 Compilation failed
 408bfee
+Mon 16 Oct 2023 03:18:11 AM UTC: 
+ heap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:75:90: error: expected ‘)’ before ‘{’ token
+   75 |     if(hijito < pq->size && pq->heapArray[hijito].priority > pq->heapArray[papa].priority{
+      |       ~                                                                                  ^
+      |                                                                                          )
+heap.c:84:3: error: expected expression before ‘}’ token
+   84 |   }
+      |   ^
+Compilation failed
+c5b91ec
