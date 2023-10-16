@@ -48,7 +48,10 @@ void heap_push(Heap* pq, void* data, int priority){
 
       heapElem cont=pq->heapArray[indice];
       pq->heapArray[indice]=pq->heapArray[indicepapa];
-      
+      pq->heapArray[indicepapa]=cont;
+      indice=indicepapa;
+    }else{
+      break;
     }
   }
 
