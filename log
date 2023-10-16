@@ -373,3 +373,17 @@ heap.c:65:7: error: unused variable ‘cont’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 7c8a96b
+Mon 16 Oct 2023 03:17:20 AM UTC: 
+ heap.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:65:26: error: variable ‘papa’ set but not used [-Werror=unused-but-set-variable]
+   65 |   int cont=0,hijo,hijito,papa;
+      |                          ^~~~
+heap.c:65:19: error: variable ‘hijito’ set but not used [-Werror=unused-but-set-variable]
+   65 |   int cont=0,hijo,hijito,papa;
+      |                   ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+408bfee
