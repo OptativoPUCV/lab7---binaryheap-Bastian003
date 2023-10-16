@@ -309,3 +309,9 @@ heap.c:44:9: error: ‘indice1’ undeclared (first use in this function); did y
 heap.c:44:9: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 36b6cf9
+Mon 16 Oct 2023 03:06:48 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+9114c03
