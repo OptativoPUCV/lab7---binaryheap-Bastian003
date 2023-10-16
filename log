@@ -13,3 +13,9 @@ heap.c:36:9: error: unused variable ‘reserva’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 3a8d86f
+Mon 16 Oct 2023 02:33:20 AM UTC: 
+ heap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  0|4
+total_score: 0/70
+0539524
