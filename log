@@ -353,3 +353,23 @@ Mon 16 Oct 2023 03:14:09 AM UTC:
  tests:  7|1
 total_score: 45/70
 ed11765
+Mon 16 Oct 2023 03:15:30 AM UTC: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:65:26: error: unused variable ‘papa’ [-Werror=unused-variable]
+   65 |   int cont=0,hijo,hijito,papa;
+      |                          ^~~~
+heap.c:65:19: error: unused variable ‘hijito’ [-Werror=unused-variable]
+   65 |   int cont=0,hijo,hijito,papa;
+      |                   ^~~~~~
+heap.c:65:14: error: unused variable ‘hijo’ [-Werror=unused-variable]
+   65 |   int cont=0,hijo,hijito,papa;
+      |              ^~~~
+heap.c:65:7: error: unused variable ‘cont’ [-Werror=unused-variable]
+   65 |   int cont=0,hijo,hijito,papa;
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7c8a96b

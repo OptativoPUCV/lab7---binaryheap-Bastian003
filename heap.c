@@ -62,6 +62,7 @@ void heap_pop(Heap* pq){
   }
   pq->heapArray[0]=pq->heapArray[pq->size-1];
   pq->size=pq->size-1;
+  int cont=0,hijo,hijito,papa;
 
 
 }
