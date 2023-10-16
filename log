@@ -325,3 +325,13 @@ heap.c:46:54: error: array subscript is not an integer
       |                                                      ^
 Compilation failed
 ad7ef93
+Mon 16 Oct 2023 03:10:01 AM UTC: 
+ heap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:47:54: error: array subscript is not an integer
+   47 |     if(pq->heapArray[indice].priority < pq->heapArray[indicepapa].priority){
+      |                                                      ^
+Compilation failed
+2caa72e
