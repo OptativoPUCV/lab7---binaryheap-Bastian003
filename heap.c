@@ -41,7 +41,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
   int indice=pq->size;
   pq->heapArray[indice]=nuevo;
-  pq->size+;
+  pq->size++;
 
   
 }

@@ -227,3 +227,15 @@ heap.c:44:12: error: expected expression before ‘;’ token
       |            ^
 Compilation failed
 dfeb71f
+Mon 16 Oct 2023 02:50:07 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:40:18: error: ‘p’ undeclared (first use in this function); did you mean ‘pq’?
+   40 |   nuevo.priority=p;
+      |                  ^
+      |                  pq
+heap.c:40:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+fb07000
