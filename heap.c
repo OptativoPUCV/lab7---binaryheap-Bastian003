@@ -44,7 +44,7 @@ void heap_push(Heap* pq, void* data, int priority){
   
   while(indice !=0){
     heapElem indicepapa=pq->heapArray[(indice-1)/2];
-    if(pq->heapArray[indice].priority < pq->heapArray[indicepapa].priority){
+    if(indicepapa.priority > pq->heapArray[indice].priority){
 
       heapElem cont=indicepapa;
       pq->heapArray[(indice-1)/2]=pq->heapArray[indice];
